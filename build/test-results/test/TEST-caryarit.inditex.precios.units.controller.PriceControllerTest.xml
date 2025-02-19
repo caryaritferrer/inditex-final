@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="caryarit.inditex.precios.units.controller.PriceControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-19T10:51:15" hostname="MacBook-Pro-de-caryarit.local" time="0.019">
+  <properties/>
+  <testcase name="Test con todo correcto" classname="caryarit.inditex.precios.units.controller.PriceControllerTest" time="0.019"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2025-02-19T11:51:13.025+01:00  INFO 52972 --- [    Test worker] c.i.p.u.controller.PriceControllerTest   : Starting PriceControllerTest using Java 17.0.14 with PID 52972 (started by caryarit in /Users/caryarit/Downloads/ejercicio_precios-main)
+2025-02-19T11:51:13.026+01:00  INFO 52972 --- [    Test worker] c.i.p.u.controller.PriceControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-02-19T11:51:13.275+01:00  INFO 52972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-19T11:51:13.300+01:00  INFO 52972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2025-02-19T11:51:13.622+01:00  INFO 52972 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2025-02-19T11:51:13.627+01:00  INFO 52972 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-19T11:51:13.627+01:00  INFO 52972 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-02-19T11:51:13.674+01:00  INFO 52972 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-19T11:51:13.674+01:00  INFO 52972 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 636 ms
+2025-02-19T11:51:13.690+01:00  INFO 52972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-19T11:51:13.773+01:00  INFO 52972 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-02-19T11:51:13.774+01:00  INFO 52972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-19T11:51:13.779+01:00  INFO 52972 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-02-19T11:51:13.855+01:00  INFO 52972 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-19T11:51:13.880+01:00  INFO 52972 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-02-19T11:51:13.881+01:00  INFO 52972 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-02-19T11:51:13.937+01:00  INFO 52972 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-02-19T11:51:13.941+01:00  INFO 52972 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-19T11:51:14.040+01:00  INFO 52972 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-02-19T11:51:14.388+01:00  INFO 52972 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-02-19T11:51:14.413+01:00  INFO 52972 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-19T11:51:14.715+01:00  INFO 52972 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-19T11:51:14.904+01:00  WARN 52972 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-19T11:51:15.094+01:00  INFO 52972 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58489 (http) with context path ''
+2025-02-19T11:51:15.099+01:00  INFO 52972 --- [    Test worker] c.i.p.u.controller.PriceControllerTest   : Started PriceControllerTest in 2.22 seconds (process running for 3.129)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
