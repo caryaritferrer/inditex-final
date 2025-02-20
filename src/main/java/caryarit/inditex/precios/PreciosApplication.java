@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @ComponentScan({"caryarit.inditex.precios.domain.usecase.impl", "caryarit.inditex.precios.application.controller"})
-@EnableJpaRepositories("caryarit.inditex.precios.domain.repository")
+@EnableJpaRepositories("caryarit.inditex.precios.port.repository")
 @EnableTransactionManagement
 public class PreciosApplication {
 

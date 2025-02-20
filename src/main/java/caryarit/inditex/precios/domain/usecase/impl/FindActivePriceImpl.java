@@ -1,7 +1,7 @@
 package caryarit.inditex.precios.domain.usecase.impl;
 
 import caryarit.inditex.precios.domain.model.Prices;
-import caryarit.inditex.precios.domain.repository.PriceRepository;
+import caryarit.inditex.precios.port.repository.PriceRepository;
 import caryarit.inditex.precios.domain.usecase.FindActivePrice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

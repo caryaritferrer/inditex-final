@@ -1,4 +1,4 @@
-package caryarit.inditex.precios.domain.repository;
+package caryarit.inditex.precios.port.repository;
 
 import caryarit.inditex.precios.domain.model.Prices;
 import caryarit.inditex.precios.domain.model.PricesID;
