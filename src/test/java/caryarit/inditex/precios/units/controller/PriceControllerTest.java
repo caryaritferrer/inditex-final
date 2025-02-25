@@ -4,7 +4,8 @@ import caryarit.inditex.precios.application.controller.PriceController;
 import caryarit.inditex.precios.application.exceptions.NotFoundException;
 import caryarit.inditex.precios.application.response.ActivePriceDTO;
 import caryarit.inditex.precios.domain.model.Prices;
-import caryarit.inditex.precios.domain.usecase.FindActivePrice;
+import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
+import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -30,7 +31,7 @@ public class PriceControllerTest {
     private PriceController priceController;
 
     @Mock
-    private FindActivePrice findActivePrice;
+    private FindActivePriceUseCase findActivePriceUseCase;
 
     @BeforeEach
     public void setUp() {
@@ -38,14 +39,14 @@ public class PriceControllerTest {
     }
 
     @Test
-    @DisplayName("Test con todo correcto")
+    @DisplayName("Test con todo parametros correctos y respuesta correcta")
     public void testSuccess() throws Exception {
         Long brandID = 1L;
         Long productID = 2L;
         LocalDateTime requestDate = LocalDateTime.now();
         Prices prices = buildPrices(1L, 2L, requestDate.minusDays(1), requestDate.plusHours(2), BigDecimal.ONE);
 
-        when(findActivePrice.execute(productID, brandID, requestDate)).thenReturn(prices);
+        when(findActivePriceUseCase.execute(productID, brandID, requestDate)).thenReturn(prices);
 
         ActivePriceDTO result = priceController.findActivePrice(productID, brandID, requestDate);
 
@@ -65,7 +66,7 @@ public class PriceControllerTest {
         Long productID = 3L;
         LocalDateTime requestDate = LocalDateTime.now();
 
-        when(findActivePrice.execute(productID, brandID, requestDate)).thenReturn(null);
+        when(findActivePriceUseCase.execute(productID, brandID, requestDate)).thenReturn(null);
 
         assertThrows(NotFoundException.class, () -> {
             priceController.findActivePrice(productID, brandID, requestDate);
@@ -79,7 +80,7 @@ public class PriceControllerTest {
         Long productID = 2L;
         LocalDateTime requestDate = LocalDateTime.now();
 
-        when(findActivePrice.execute(productID, brandID, requestDate))
+        when(findActivePriceUseCase.execute(productID, brandID, requestDate))
                 .thenThrow(new RuntimeException("NOT ALL DATA"));
 
         assertThrows(RuntimeException.class, () -> {

@@ -2,14 +2,14 @@ package caryarit.inditex.precios.domain.usecase.impl;
 
 import caryarit.inditex.precios.domain.model.Prices;
 import caryarit.inditex.precios.port.repository.PriceRepository;
-import caryarit.inditex.precios.domain.usecase.FindActivePrice;
+import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
 @Service
-public class FindActivePriceImpl implements FindActivePrice {
+public class FindActivePriceImpl implements FindActivePriceUseCase {
 
     private PriceRepository priceRepository;
 

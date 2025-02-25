@@ -3,7 +3,7 @@ package caryarit.inditex.precios.application.controller;
 import caryarit.inditex.precios.application.exceptions.NotFoundException;
 import caryarit.inditex.precios.application.response.ActivePriceDTO;
 import caryarit.inditex.precios.domain.model.Prices;
-import caryarit.inditex.precios.domain.usecase.FindActivePrice;
+import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 @RequestMapping("/precio")
 public class PriceController {
 
-    private FindActivePrice findActivePrice;
+    private FindActivePriceUseCase findActivePriceUseCase;
 
     @Autowired
-    public PriceController(@Autowired FindActivePrice findActivePrice) {
-        this.findActivePrice = findActivePrice;
+    public PriceController(@Autowired FindActivePriceUseCase findActivePriceUseCase) {
+        this.findActivePriceUseCase = findActivePriceUseCase;
     }
 
     @GetMapping(value="/encuentraActivo", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -29,7 +29,7 @@ public class PriceController {
             dateRequest = LocalDateTime.now();
         }
 
-        Prices activePrice = findActivePrice.execute(productID, brandID, dateRequest);
+        Prices activePrice = findActivePriceUseCase.execute(productID, brandID, dateRequest);
 
         if (activePrice == null) {
             throw new NotFoundException(String.format("No encontrado: %d - Brand ID: %d - fecha: %s ",
