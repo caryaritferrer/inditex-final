@@ -1,7 +1,7 @@
 package caryarit.inditex.precios.application.controller;
 
 import caryarit.inditex.precios.application.exceptions.NotFoundException;
-import caryarit.inditex.precios.application.response.ActivePriceDTO;
+import caryarit.inditex.precios.domain.response.ActivePriceDTO;
 import caryarit.inditex.precios.domain.model.Prices;
 import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package caryarit.inditex.precios.integrations;
 
 import caryarit.inditex.precios.PreciosApplication;
-import caryarit.inditex.precios.application.response.ActivePriceDTO;
+import caryarit.inditex.precios.domain.response.ActivePriceDTO;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.Assertions;

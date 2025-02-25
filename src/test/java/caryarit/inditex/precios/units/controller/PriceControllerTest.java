@@ -2,9 +2,8 @@ package caryarit.inditex.precios.units.controller;
 
 import caryarit.inditex.precios.application.controller.PriceController;
 import caryarit.inditex.precios.application.exceptions.NotFoundException;
-import caryarit.inditex.precios.application.response.ActivePriceDTO;
+import caryarit.inditex.precios.domain.response.ActivePriceDTO;
 import caryarit.inditex.precios.domain.model.Prices;
-import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import caryarit.inditex.precios.domain.usecase.FindActivePriceUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

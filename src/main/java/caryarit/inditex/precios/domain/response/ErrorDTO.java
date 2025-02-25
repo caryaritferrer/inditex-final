@@ -1,4 +1,4 @@
-package caryarit.inditex.precios.application.response;
+package caryarit.inditex.precios.domain.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,7 +1,7 @@
 package caryarit.inditex.precios.application.controller;
 
 import caryarit.inditex.precios.application.exceptions.NotFoundException;
-import caryarit.inditex.precios.application.response.ErrorDTO;
+import caryarit.inditex.precios.domain.response.ErrorDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
